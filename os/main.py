@@ -7,11 +7,12 @@ if __name__ == "__main__":
     re = str(input("ishodnic - "))
     wr = str(input("cuda - "))
     kn = input("vvedite nov catalog ")
-    os.mkdir(kn)
     p = os.getcwd()
+    path = os.path.join(p, kn)
+    os.makedirs(path)
 
-with open(re,"r", encoding="utf-8") as file:
-        qe = open(wr,"a")
+    with open(re, "w+", encoding="utf-8") as file:
+        qe = open(wr, "a")
         w = 1
         q = ""
         ot = ""
@@ -19,7 +20,7 @@ with open(re,"r", encoding="utf-8") as file:
             q = str(w) + "; " + i
             w += 1
             ot = ot + q + "\n"
-        os.chdir(p + '\\' + kn)
+        os.chdir(path)
         qe = open(wr, "a")
         qe.write(ot)
 
