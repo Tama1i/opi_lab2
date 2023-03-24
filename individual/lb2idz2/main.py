@@ -12,3 +12,4 @@ if __name__ == "__main__":
             q = str(w) + "; " + i
             w += 1
             qe.write(q+"\n")
+
