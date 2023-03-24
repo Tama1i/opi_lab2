@@ -10,16 +10,15 @@ if __name__ == "__main__":
     p = os.getcwd()
     path = os.path.join(p, ka)
     os.makedirs(path)
-
+    w = 1
+    q = ""
+    ot = ""
     with open(re,"r", encoding="utf-8") as file:
-        w = 1
-        q = ""
-        ot = ""
-        for i in file:
-            q = str(w) + "; " + i
-            w += 1
-            ot = ot + q + "\n"
+        ff = file.readlines()
+    for i in ff:
+        q = (f"{str(w)}; {i}")
+        w += 1
+        ot = (f'{ot}{q}\n')
     os.chdir(path)
-    ge = open(wr, "a")
-    ge.write(ot)
-    ge.close()
+    with open(wr, "a", encoding="utf-8") as ge:
+        ge.write(ot)

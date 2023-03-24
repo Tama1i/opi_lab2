@@ -8,20 +8,20 @@ def gl(f):
 if __name__ == "__main__":
     with open("f1.txt","r", encoding="utf-8") as file:
         f = file.read()
-        f = f.lower()
-        f = " " + f + "\n"
-        s = ""
-        i = 1
-        ot = ""
-        for i in range(len(f)-1):
-            if (f[i-1] == " ") or (f[i-1] == "\n"):
-                k = 1
-                if (gl(f[i]) == 1):
-                    k = 2
-            if k == 2:
-                s = s + f[i]
-                if (f[i] == " ") or (f[i] == "\n"):
-                    k = 0
-                    ot = s + " "
+    f = f.lower()
+    f = (f" {f} \n")
+    s = ""
+    i = 1
+    ot = ""
+    for i in range(len(f)-1):
+        if (f[i-1] == " ") or (f[i-1] == "\n"):
+            k = 1
+            if (gl(f[i]) == 1):
+                k = 2
+        if k == 2:
+            s = s + f[i]
+            if (f[i] == " ") or (f[i] == "\n"):
+                k = 0
+                ot = s + " "
 
-        print(ot)
+    print(ot)
