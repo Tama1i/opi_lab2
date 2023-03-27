@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 def gl(f):
-    if ((f == "a") or (f == "e") or (f == "y") or (f == "u") or
-            (f == "i") or (f == "o") or (f == "j")):
+    s = "aeyuioj"
+    if f in s:
         return 1
 
 if __name__ == "__main__":
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     s = ""
     i = 1
     ot = ""
-    for i in range(len(f)-1):
+    for i, ii in enumerate(f):
         if (f[i-1] == " ") or (f[i-1] == "\n"):
             k = 1
             if (gl(f[i]) == 1):
